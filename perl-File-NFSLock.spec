@@ -1,7 +1,7 @@
 %define	module	File-NFSLock
 %define	name	perl-%{module}
 %define	version	1.20
-%define	release	%mkrel 1
+%define	release	%mkrel 2
 
 Name:		%{name}
 Summary:	%{module} module for perl

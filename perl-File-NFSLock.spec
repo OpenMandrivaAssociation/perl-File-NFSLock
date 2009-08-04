@@ -1,25 +1,24 @@
-%define	module	File-NFSLock
-%define	name	perl-%{module}
-%define	version	1.20
-%define	release	%mkrel 4
+%define	upstream_name	 File-NFSLock
+%define	upstream_version 1.20
 
-Name:		%{name}
-Summary:	%{module} module for perl
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:	%{upstream_name} module for perl
 License:	GPL
 Group:		Development/Perl
-URL:		http://search.cpan.org/~bbb/%{module}
-Source0:	http://search.cpan.org/CPAN/authors/id/B/BB/BBB/%{module}-%{version}.tar.bz2
+Url:		http://search.cpan.org/~bbb/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/authors/id/B/BB/BBB/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
-BuildRequires:	perl-devel
-Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
-%{module} perl module
+%{upstream_name} perl module
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -40,4 +39,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_vendorlib}/File/NFSLock.pm
 %{_mandir}/man3/*
-

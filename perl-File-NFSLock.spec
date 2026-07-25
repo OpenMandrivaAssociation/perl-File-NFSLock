@@ -1,15 +1,15 @@
 %define	upstream_name	 File-NFSLock
-%define	upstream_version 1.21
+%define	upstream_version 1.29
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	%{upstream_name} module for perl
 License:	GPL
 Group:		Development/Perl
-Url:		https://search.cpan.org/~bbb/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/B/BB/BBB/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/File-NFSLock
+Source0:	https://cpan.metacpan.org/authors/id/B/BB/BBB/File-NFSLock-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
